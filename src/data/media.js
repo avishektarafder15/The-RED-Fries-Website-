@@ -23,11 +23,11 @@ export const IMAGES = {
   profile: '/images/profile.jpg',
   ambience: [
     { src: '/images/ambience-1.jpg', caption: 'Main Dining Hall', span: 'large' },
-    { src: '/images/ambience-2.jpg', caption: 'Open Kitchen', span: 'medium' },
-    { src: '/images/ambience-3.jpg', caption: 'Chef\'s Table', span: 'small' },
+    { src: '/images/ambience-2.jpg', caption: 'Open Kitchen', span: 'large' },
+    { src: '/images/ambience-3.jpg', caption: 'Chef\'s Table', span: 'medium' },
     { src: '/images/ambience-4.jpg', caption: 'Rooftop Lounge', span: 'medium' },
-    { src: '/images/ambience-5.jpg', caption: 'Private Booths', span: 'small' },
-    { src: '/images/ambience-6.jpg', caption: 'Bar & Cocktails', span: 'large' },
+    { src: '/images/ambience-5.jpg', caption: 'Private Booths', span: 'medium' },
+    { src: '/images/ambience-6.jpg', caption: 'Bar & Cocktails', span: 'full' },
   ],
 }
 

@@ -62,6 +62,9 @@
   overflow: hidden;
   cursor: pointer;
   background: var(--bg-elevated);
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .ambience__item img {
@@ -85,9 +88,19 @@
   grid-row: span 2;
 }
 
+.ambience__item--wide {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+
 .ambience__item--small {
   grid-column: span 3;
-  grid-row: span 1;
+  grid-row: span 2;
+}
+
+.ambience__item--full {
+  grid-column: span 12;
+  grid-row: span 2;
 }
 
 .ambience__overlay {
@@ -211,7 +224,9 @@
 
   .ambience__item--large,
   .ambience__item--medium,
-  .ambience__item--small {
+  .ambience__item--wide,
+  .ambience__item--small,
+  .ambience__item--full {
     grid-column: span 1;
     grid-row: span 1;
   }
