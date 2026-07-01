@@ -1,0 +1,227 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem clamp(1.25rem, 4vw, 3.5rem);
+  background: linear-gradient(180deg, rgba(13, 13, 15, 0.95) 0%, rgba(13, 13, 15, 0) 100%);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.navbar__wordmark {
+  white-space: nowrap;
+}
+
+.navbar__wordmark .red {
+  color: #ef4444;
+}
+
+.navbar__logo-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.navbar__pill {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+}
+
+.navbar__link {
+  position: relative;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-pill);
+  transition: color 0.25s ease;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--text);
+}
+
+.navbar__active-pill {
+  position: absolute;
+  inset: 0;
+  background: var(--purple);
+  border-radius: var(--radius-pill);
+  z-index: 0;
+}
+
+.navbar__link-text {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-muted);
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar__search:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.navbar__cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: var(--text);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar__cart:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.navbar__cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+  background: var(--gold);
+  color: var(--bg);
+  border-radius: var(--radius-pill);
+}
+
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.35rem 0.2rem 0.2rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  transition: transform 0.25s ease;
+}
+
+.navbar__profile:hover {
+  transform: scale(1.04);
+}
+
+.navbar__profile img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar__chevron {
+  color: var(--text-muted);
+  margin-right: 0.15rem;
+}
+
+.navbar__mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--text);
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+}
+
+.navbar__mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar__pill {
+    display: none;
+  }
+
+  .navbar__profile {
+    display: none;
+  }
+
+  .navbar__mobile-toggle {
+    display: flex;
+  }
+
+  .navbar__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 1.25rem;
+    right: 1.25rem;
+    padding: 0.75rem;
+    background: rgba(22, 22, 26, 0.95);
+    backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    gap: 0.25rem;
+  }
+
+  .navbar__mobile-menu button {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .navbar__mobile-menu button:hover,
+  .navbar__mobile-menu button.active {
+    background: rgba(124, 58, 237, 0.2);
+    color: var(--text);
+  }
+}
